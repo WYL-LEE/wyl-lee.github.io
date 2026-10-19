@@ -3,6 +3,7 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
-
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+在柏林的某個角落，留下了一些什麼。有太多值得回憶和記錄的東西，但卻無處下手。
+所以這裡記錄著我在德國柏林交換期間的生活、旅行足跡，以及那些值得珍藏的日常。從陌生的城市開始，慢慢認識不同的文化，也重新發現生活中那些平凡卻珍貴的瞬間。
+不喜歡走路但卻在這一年瘋狂暴走，用文字與照片留下生活的痕跡。希望透過這個網站，這段特別的時光，分享我在柏林看見的風景、遇見的人，以及那些只屬於這段旅程的故事。
+不要在偷懶了不整理了！！！！督促
