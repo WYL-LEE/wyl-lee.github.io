@@ -1,21 +1,23 @@
 
 ---
-# Only the main Sass file needs front matter (the dashes are enough).
 ---
 
 @charset "utf-8";
+@import "minimal-mistakes";
 
-$serif: Georgia, "Times New Roman", serif;
-$sans-serif: "Helvetica Neue", Arial, sans-serif;
+/* Editorial style for Somewhere in Berlin */
 
 body {
-  font-family: $sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
   line-height: 1.9;
 }
 
-h1, h2, h3, h4 {
-  font-family: $serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
@@ -23,6 +25,7 @@ h1, h2, h3, h4 {
 .page__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 .page__content {
@@ -44,8 +47,12 @@ h1, h2, h3, h4 {
   margin-top: 3rem;
 }
 
-@media (min-width: 64em) {
-  .layout--single .page {
-    max-width: 1000px;
-  }
+/* Wider article layout */
+.layout--single .page {
+  max-width: 1000px;
+}
+
+/* Soft background */
+body {
+  background-color: #faf8f4;
 }
