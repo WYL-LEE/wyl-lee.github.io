@@ -1,9 +1,4 @@
 ---
 title: "還在嘗試把東西用好。。。"
 date: 2025-09-29
-categories:
-  - blog
-tags:
-  - Jekyll
-  - update
 ---
