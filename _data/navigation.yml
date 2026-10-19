@@ -1,9 +1,10 @@
-main:
-  - title: "Posts"
-    url: /攝影/
 
-  - title: "About"
-    url: /關於/
-    
-  - title: "Travel"
-    url: /旅行/
+main:
+  - title: "攝影"
+    url: /Posts
+
+  - title: "關於我"
+    url: /about/
+
+  - title: "旅行紀錄"
+    url: /travel/
