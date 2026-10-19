@@ -1,4 +1,3 @@
-
 ---
 title: "關於"
 permalink: /about/
