@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   記錄交換學生這短短一年裡，想記下來的回憶、旅行足跡與生活點滴。
   A year of exchange, countless memories to keep. A collection of moments, travels, and everyday life worth remembering.
 github_username: 頭
-minimal_mistakes_skin: default
+minimal_mistakes_skin: air
 search: true
 
 # Build settings
@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "ＷAN YING LEE"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "在柏林的某個角落停留過，記錄交換生活、旅行與日常。"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
