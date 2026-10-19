@@ -1,8 +1,7 @@
-
 main:
-  - title: "文章"
-    url: /
-  - title: "旅行紀錄"
-    url: /travel/
   - title: "關於我"
     url: /about/
+  - title: "攝影"
+    url: /photos/
+  - title: "旅行"
+    url: /travel/
