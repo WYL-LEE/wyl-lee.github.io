@@ -20,9 +20,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Somewhere in Berlin, left behind memories and took home stories.
   記錄交換學生這短短一年裡，想記下來的回憶、旅行足跡與生活點滴。
   A year of exchange, countless memories to keep. A collection of moments, travels, and everyday life worth remembering.
-github_username: 頭
+github_username: WYL-LEE
 minimal_mistakes_skin: air
-search: true
+search: false
+
+atom_feed:
+  hide: true
 
 # Build settings
 markdown: kramdown
@@ -66,11 +69,11 @@ author:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
 
-footer:
-  links:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+#footer:
+#  links:
+#    - label: "Instagram"
+#      icon: "fab fa-fw fa-instagram"
+#      url: "https://instagram.com/"
 
 defaults:
   # _posts
