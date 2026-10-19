@@ -1,0 +1,51 @@
+
+---
+# Only the main Sass file needs front matter (the dashes are enough).
+---
+
+@charset "utf-8";
+
+$serif: Georgia, "Times New Roman", serif;
+$sans-serif: "Helvetica Neue", Arial, sans-serif;
+
+body {
+  font-family: $sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.9;
+}
+
+h1, h2, h3, h4 {
+  font-family: $serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.page__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.page__content {
+  font-size: 1rem;
+}
+
+.page__content p {
+  margin-bottom: 1.8em;
+}
+
+.page__content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.page__content h2 {
+  margin-top: 3rem;
+}
+
+@media (min-width: 64em) {
+  .layout--single .page {
+    max-width: 1000px;
+  }
+}
