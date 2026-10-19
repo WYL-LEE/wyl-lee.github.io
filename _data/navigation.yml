@@ -1,6 +1,9 @@
 main:
   - title: "Posts"
-    url: /posts/
+    url: /攝影/
 
   - title: "About"
-    url: /about/
+    url: /關於/
+    
+  - title: "Travel"
+    url: /旅行/
