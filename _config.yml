@@ -1,4 +1,4 @@
-# 因為不知道要如何整理一整年份的旅程，所以最後決定用這個方式進行。
+# hello
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -16,10 +16,11 @@
 title: 頭
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-github_username: username
+  在柏林的某個角落留下了一些什麼。
+  Somewhere in Berlin, left behind memories and took home stories.
+  記錄交換學生這短短一年裡，想記下來的回憶、旅行足跡與生活點滴。
+  A year of exchange, countless memories to keep. A collection of moments, travels, and everyday life worth remembering.
+github_username: 頭
 minimal_mistakes_skin: default
 search: true
 
