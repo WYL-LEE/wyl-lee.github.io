@@ -1,6 +1,6 @@
 
 ---
-title: "About"
+title: "關於"
 permalink: /about/
 layout: single
 author_profile: false
