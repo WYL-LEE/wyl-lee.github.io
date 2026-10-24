@@ -46,6 +46,6 @@ read_time: false
   <figure><img src="/images/birmingham/birmingham-1.JPG" alt="兩瓶戴著針織小帽的 innocent 果昔"><figcaption>超市的果昔，瓶蓋上還戴著針織小帽子，每買一瓶就捐 30p 給 Age UK</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-16.JPG" alt="Box Bush Gelato 門前的兩份冰淇淋"><figcaption>水上博頓的 Box Bush Gelato</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-28.JPG" alt="Box Bush 招牌前的雙球冰淇淋"><figcaption>Box Bush Gelato 的雙球甜筒</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-39.JPG" alt="DEYA Steady Rolling Man 啤酒罐和杯中的啤酒"><figcaption>被酒吧客人推薦的啤酒，超好喝，可惜買貴了⋯</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-39.JPG" alt="DEYA Steady Rolling Man 啤酒罐和杯中的啤酒"><figcaption>被酒吧客人推薦的啤酒，超好喝，但最後上網找發現買貴了⋯</figcaption></figure>
 </div>
 
