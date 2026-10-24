@@ -22,7 +22,7 @@ read_time: false
   <figure><img src="/images/birmingham/birmingham-9.JPG" alt="水上伯頓"><figcaption>剛好去的時間是轉秋，所以水上伯頓的兩旁都會看到漂亮的葉子</figcaption></figure>
    <figure><img src="/images/birmingham/birmingham-42.JPG" alt="伯明罕的紅磚頭市集"><figcaption>伯明罕的紅磚頭室內市集</figcaption></figure>
  <figure><img src="/images/birmingham/birmingham-15.JPG" alt="超級好吃的早午餐店"><figcaption>在伍斯特停留的時候去吃了很精緻但也很好吃的早午餐</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-12.JPG" alt="考文垂大教堂的舊教堂遺址"><figcaption></figcaption></figure>舊教堂遺址
+  <figure><img src="/images/birmingham/birmingham-12.JPG" alt="考文垂大教堂的舊教堂遺址"><figcaption>舊教堂遺址</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-36.JPG" alt="聖三一教堂（英語：Holy Trinity Church, Coventry）"><figcaption>考文垂聖三一教堂</figcaption></figure>
 </div>
 
