@@ -18,10 +18,11 @@ read_time: false
 
 
 <div class="swipe">
-  <figure><img src="/images/prague/prague-7.jpg" alt="查理大橋上的街頭畫家"><figcaption>橋上畫肖像的街頭畫家</figcaption></figure>
-
-
-
+  <figure><img src="/images/birmingham/birmingham-9.JPG" alt="水上伯頓"><figcaption>剛好去的時間是轉秋，所以水上伯頓的兩旁都會看到漂亮的葉子</figcaption></figure>
+   <figure><img src="/images/birmingham/birmingham-42.JPG" alt="伯明罕的紅磚頭市集"><figcaption>伯明罕的紅磚頭室內市集</figcaption></figure>
+ <figure><img src="/images/birmingham/birmingham-15.JPG" alt="超級好吃的早午餐店"><figcaption>在伍斯特停留的時候去吃了很精緻但也很好吃的早午餐</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-12.JPG" alt="考文垂大教堂的舊教堂遺址"><figcaption>被公車司機放鳥，所以晃晃發現了這景點</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-36.JPG" alt="聖三一教堂（英語：Holy Trinity Church, Coventry）"><figcaption>考文垂聖三一教堂</figcaption></figure>
 </div>
 
 食物 {#food}
@@ -35,6 +36,7 @@ read_time: false
 <div class="swipe">
   <figure><img src="/images/birmingham/birmingham-18.JPG" alt="Five Guys 的紙袋、奶昔和花生"><figcaption>Five Guys 的奶昔</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-25.JPG" alt="Shake Shack 托盤上的兩個漢堡"><figcaption>Shake Shack 的漢堡</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-24.JPG" alt="Wingstop 的炸雞"><figcaption>Wingstop 的炸雞 檸檬胡椒口味好吃</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-20.JPG" alt="Wetherspoon 的早餐瑪芬"><figcaption>Wetherspoon 的英式早餐</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-26.JPG" alt="Yakinori 日式餐廳前的兩杯咖哩飯"><figcaption>大學城附近的活動，在 Yakinori 拿到免費試吃的咖哩飯</figcaption></figure>
 </div>
