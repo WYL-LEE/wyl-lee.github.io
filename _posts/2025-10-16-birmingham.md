@@ -2,7 +2,7 @@
 title: "伯明罕四天三夜"
 date: 2025-10-16-2025-10-19
 layout: single
-cover: /assets/images/birmingham-45.JPG
+cover: /assets/images/birmingham-45.jpg
 author_profile: false
 share: false
 related: false
