@@ -2,7 +2,7 @@
 title: "伯明罕四天三夜"
 date: 2025-10-16-2025-10-19
 layout: single
-cover: /assets/images/berlin-27.jpg
+cover: /assets/images/birmingham-45.JPG
 author_profile: false
 share: false
 related: false
@@ -50,4 +50,5 @@ read_time: false
   <figure><img src="/images/birmingham/birmingham-28.JPG" alt="Box Bush 招牌前的雙球冰淇淋"><figcaption>Box Bush Gelato 的雙球甜筒</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-39.JPG" alt="DEYA Steady Rolling Man 啤酒罐和杯中的啤酒"><figcaption>被酒吧客人推薦的啤酒，超好喝，但最後上網找發現買貴了⋯</figcaption></figure>
 </div>
+
 
