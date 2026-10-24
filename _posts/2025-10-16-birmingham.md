@@ -54,7 +54,7 @@ read_time: false
 <div class="swipe">
   <figure><img src="/images/birmingham/birmingham-40.JPG" alt="刮刮樂"><figcaption>到哪都想要試手氣的刮刮樂</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-44.JPG" alt="水上伯頓"><figcaption>水上伯頓真的很漂亮</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-43.jpg" alt="突兀的遊樂園"><figcaption>突然晃到有臨時遊樂園的地方</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-43.jpg" alt="突兀的遊樂園"><figcaption>去華威的時候有臨時遊樂園的地方</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-41.JPG" alt="漂亮房子"><figcaption>木造建築的房子很漂亮</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-44.jpg" alt="水上伯頓"><figcaption>水上伯頓真的很漂亮</figcaption></figure>
 </div>
