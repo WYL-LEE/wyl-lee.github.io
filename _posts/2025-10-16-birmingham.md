@@ -26,26 +26,22 @@ read_time: false
 
 食物 {#food}
 
-**每天一起煮的晚餐**
 <div class="swipe">
-  <figure><img src="/images/birmingham/birmingham-14.JPG" alt="白菜蛋花湯、洋蔥炒肉片和白飯"><figcaption>白菜蛋花湯配洋蔥炒肉片</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-19.JPG" alt="生菜、蛋炒飯、烤肉和香菇炒雞肉"><figcaption>生菜包肉的晚餐</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-27.JPG" alt="鍋中的白菜蛋花湯、洋蔥炒肉片和白飯"><figcaption>白菜蛋花湯配洋蔥炒肉片</figcaption></figure>
-  <figure><img src="/images/birmingham/birmingham-38.JPG" alt="香菇炒雞肉、蛋炒飯、烤肉和生菜"><figcaption>生菜包肉的晚餐</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-14.JPG" alt="每天一起煮的晚餐1"><figcaption>每天一起煮的晚餐1</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-19.JPG" alt="每天一起煮的晚餐2"><figcaption>每天一起煮的晚餐2</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-27.JPG" alt="每天一起煮的晚餐3"><figcaption>每天一起煮的晚餐3</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-38.JPG" alt="每天一起煮的晚餐4"><figcaption>每天一起煮的晚餐4</figcaption></figure>
 </div>
-**外食**
 <div class="swipe">
   <figure><img src="/images/birmingham/birmingham-18.JPG" alt="Five Guys 的紙袋、奶昔和花生"><figcaption>Five Guys 的奶昔</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-25.JPG" alt="Shake Shack 托盤上的兩個漢堡"><figcaption>Shake Shack 的漢堡</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-20.JPG" alt="Wetherspoon 的早餐瑪芬"><figcaption>Wetherspoon 的英式早餐</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-26.JPG" alt="Yakinori 日式餐廳前的兩杯咖哩飯"><figcaption>大學城附近的活動，在 Yakinori 拿到免費試吃的咖哩飯</figcaption></figure>
 </div>
-**路上吃**
 <div class="swipe">
   <figure><img src="/images/birmingham/birmingham-33.JPG" alt="考文垂 Central BBQ's 攤位前的香腸熱狗"><figcaption>在考文垂吃的半米長香腸熱狗</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-32.JPG" alt="火車上的壽司和兩盒兒童果昔"><figcaption>坐火車時吃的小食</figcaption></figure>
 </div>
-**甜點與飲料**
 <div class="swipe">
   <figure><img src="/images/birmingham/birmingham-1.JPG" alt="兩瓶戴著針織小帽的 innocent 果昔"><figcaption>超市的果昔，瓶蓋上還戴著針織小帽子，每買一瓶就捐 30p 給 Age UK</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-16.JPG" alt="Box Bush Gelato 門前的兩份冰淇淋"><figcaption>水上博頓的 Box Bush Gelato</figcaption></figure>
