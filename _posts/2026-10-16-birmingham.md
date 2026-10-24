@@ -1,6 +1,6 @@
 ---
 title: "伯明罕四天三夜"
-date: 2026-10-166-2026-10-19
+date: 2025-10-16-2025-10-19
 layout: single
 cover: /assets/images/berlin-27.jpg
 author_profile: false
