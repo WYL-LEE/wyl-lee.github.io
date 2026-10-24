@@ -18,6 +18,7 @@ read_time: false
 
 
 <div class="swipe">
+    <figure><img src="/images/birmingham/birmingham-38.JPG" alt="伯明罕車站巨大的機械公牛"><figcaption>伯明罕車站巨大的機械公牛</figcaption></figure>
   <figure><img src="/images/birmingham/birmingham-9.JPG" alt="水上伯頓"><figcaption>剛好去的時間是轉秋，所以水上伯頓的兩旁都會看到漂亮的葉子</figcaption></figure>
    <figure><img src="/images/birmingham/birmingham-42.JPG" alt="伯明罕的紅磚頭市集"><figcaption>伯明罕的紅磚頭室內市集</figcaption></figure>
  <figure><img src="/images/birmingham/birmingham-15.JPG" alt="超級好吃的早午餐店"><figcaption>在伍斯特停留的時候去吃了很精緻但也很好吃的早午餐</figcaption></figure>
@@ -51,4 +52,19 @@ read_time: false
   <figure><img src="/images/birmingham/birmingham-39.JPG" alt="DEYA Steady Rolling Man 啤酒罐和杯中的啤酒"><figcaption>被酒吧客人推薦的啤酒，超好喝，但最後上網找發現買貴了⋯</figcaption></figure>
 </div>
 
+隨手拍 {#snaps}
 
+<div class="swipe">
+  <figure><img src="/images/birmingham/birmingham-40.JPG" alt="刮刮樂"><figcaption>到哪都想要試手氣的刮刮樂</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-44.JPG" alt="水上伯頓"><figcaption>水上伯頓真的很漂亮</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-43.JPG" alt="突兀的遊樂園"><figcaption>突然晃到有臨時遊樂園的地方</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-41.JPG" alt="漂亮房子"><figcaption>木造建築的房子很漂亮</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-44.JPG" alt="水上伯頓"><figcaption>水上伯頓真的很漂亮</figcaption></figure>
+</div>
+<div class="swipe">
+  <figure><img src="/images/birmingham/birmingham-29.JPG" alt="門牌"><figcaption>隨便一個建築都是百年起跳</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-22.JPG" alt="可愛作品"><figcaption>市集裡的可愛鬼</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-08.JPG" alt="轉秋的風景"><figcaption>單純覺得很有英國村莊的感覺</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-4.JPG" alt="伯明罕"><figcaption>伯明罕的市區</figcaption></figure>
+  <figure><img src="/images/birmingham/birmingham-5.JPG" alt="可愛招牌"><figcaption>招牌</figcaption></figure>
+</div>
