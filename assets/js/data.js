@@ -27,8 +27,8 @@ const ITEMS = {
 };
 const SITE_TITLE="Somewhere in Berlin";
 /* 跟著滑鼠的小圖：填你的插圖路徑（建議透明背景 PNG），留空就是黃色小花 */
-const CURSOR_IMG="";            // 例如 "images/art/my-flower.png"
+const CURSOR_IMG = "images/decor/draw-1.png";// 例如 "images/art/my-flower.png"
 /* 首頁會飄浮的插圖：填一到數張，留空就是預設的星星和圓圈 */
-const FLOAT_IMGS=[];            // 例如 ["images/art/star.png","images/art/circle.png"]
+const FLOAT_IMGS = ["images/decor/draw-2.png", "images/decor/draw-3.png"];// 例如 ["images/art/star.png","images/art/circle.png"]
 /* ============================================ */
 
