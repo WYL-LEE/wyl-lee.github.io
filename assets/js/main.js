@@ -58,3 +58,12 @@ if(FLOAT_IMGS.length){
 }
 
 build(); setLang("zh"); route();
+
+// 把滑鼠游標換成自己的插圖
+const REAL_CURSOR_IMG = "images/decor/cursor.png";
+if (REAL_CURSOR_IMG) {
+  const st = document.createElement("style");
+  st.textContent = `html,body,a,button,.card,#lb{cursor:url("${REAL_CURSOR_IMG}") 0 0, auto !important}`;
+  document.head.appendChild(st);
+  document.querySelector("#flower").style.display = "none";
+}
