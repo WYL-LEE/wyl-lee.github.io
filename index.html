@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Somewhere in Berlin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--paper:#fffdf6;--sun:#ffd400;--pink:#ff9fb5;--mint:#9fe3c8}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.7;min-height:100vh;
+ background-image:radial-gradient(#0000001a 1.2px,transparent 1.2px);background-size:22px 22px}
+a{color:inherit}
+header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:3px solid var(--ink);
+ display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;padding:.6rem 1.2rem}
+.logo{font-family:"Caveat Brush",cursive;font-size:1.7rem;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+nav a,.lang{font-weight:700;text-decoration:none;border:2.5px solid var(--ink);border-radius:999px;padding:.15rem .9rem;background:#fff;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s}
+nav a:hover,.lang:hover{background:var(--sun);transform:rotate(-4deg) scale(1.06)}
+nav a.on{background:var(--ink);color:var(--paper)}
+main{max-width:1100px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.view{display:none}.view.on{display:block;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1{font-family:"Caveat Brush",cursive;font-weight:400;font-size:clamp(3rem,10vw,6.5rem);line-height:1;margin:1rem 0 .5rem}
+h1 span{display:inline-block;transition:transform .2s}
+h1 span:hover{transform:translateY(-10px) rotate(-8deg);color:#e0a800}
+h2{font-family:"Caveat Brush",cursive;font-weight:400;font-size:2.6rem;margin-bottom:.3rem;display:inline-block;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.sub{font-size:1.15rem;max-width:34rem;margin-bottom:1.5rem}
+.hero{position:relative;min-height:60vh}
+.doodle{position:absolute;pointer-events:none;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px) rotate(6deg)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem;margin-top:1.5rem}
+.card{border:3px solid var(--ink);border-radius:14px;background:#fff;box-shadow:6px 6px 0 var(--ink);overflow:hidden;cursor:pointer;
+ transition:transform .2s,box-shadow .2s}
+.card:nth-child(odd){transform:rotate(-1.2deg)}.card:nth-child(even){transform:rotate(1deg)}
+.card:hover{transform:rotate(0) translateY(-6px);box-shadow:10px 10px 0 var(--ink)}
+.thumb{aspect-ratio:4/3;display:grid;place-items:center;border-bottom:3px solid var(--ink);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.cap{padding:.6rem .9rem;font-weight:700}
+.cap small{display:block;font-weight:400;opacity:.65}
+#about .box{border:3px solid var(--ink);border-radius:16px;background:#fff;box-shadow:6px 6px 0 var(--ink);padding:1.4rem;max-width:42rem;margin-top:1rem}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:50;padding:1rem;cursor:zoom-out}
+#lb.on{display:grid}#lb img{max-width:100%;max-height:90vh;border:4px solid #fff;border-radius:10px}
+#flower{position:fixed;left:0;top:0;width:54px;pointer-events:none;z-index:40;will-change:transform}
+#flower svg{animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+footer{text-align:center;padding:1rem;font-family:"Caveat Brush",cursive;font-size:1.2rem}
+@media (hover:none){#flower{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="flower" aria-hidden="true">
+<svg viewBox="-30 -30 60 60"><g fill="#ffd400" stroke="#111" stroke-width="2.5" stroke-linejoin="round">
+<ellipse cy="-14" rx="8" ry="12"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(72)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(144)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(216)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(288)"/>
+<circle r="7" fill="#fff"/></g></svg>
+</div>
+
+<header>
+<a class="logo" href="#home">Somewhere in Berlin</a>
+<nav>
+<a href="#about" data-zh="關於我" data-en="About"></a>
+<a href="#photo" data-zh="攝影" data-en="Photos"></a>
+<a href="#trip" data-zh="旅行" data-en="Trips"></a>
+<a href="#art" data-zh="插圖" data-en="Illustrations"></a>
+<button class="lang" id="lang">EN</button>
+</nav>
+</header>
+
+<main>
+<section class="view hero" id="home">
+<svg class="doodle" style="right:4%;top:2%;width:150px" viewBox="0 0 120 120" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M10 80c15-50 25 20 40-20s25 30 40-10"/><circle cx="60" cy="30" r="14" fill="#ff9fb5"/></svg>
+<svg class="doodle" style="left:46%;bottom:6%;width:110px;animation-delay:-2s" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10l10 28 30 2-23 19 8 29-25-16-25 16 8-29L10 40l30-2z" fill="#9fe3c8"/></svg>
+<h1 id="bigname"></h1>
+<p class="sub" data-zh="交換學生的日常筆記：用相機、腳步和筆，把在柏林和歐洲各地遇見的東西畫下來。" data-en="Notes from an exchange year — photos, trips and drawings from Berlin and around Europe."></p>
+<nav style="margin-top:1rem">
+<a href="#photo" data-zh="看攝影 →" data-en="Photos →"></a>
+<a href="#trip" data-zh="看旅行 →" data-en="Trips →"></a>
+<a href="#art" data-zh="看插圖 →" data-en="Drawings →"></a>
+</nav>
+</section>
+
+<section class="view" id="about">
+<h2 data-zh="關於我" data-en="About me"></h2>
+<div class="box">
+<p data-zh="嗨，我是倇瑩，藝術管理背景，2025–2026 在柏林交換。這裡收集我的照片、旅行紀錄與插圖。" data-en="Hi, I'm Yingying — an arts management student on exchange in Berlin (2025–2026). This is where I keep my photos, travel notes and drawings."></p>
+</div>
+</section>
+
+<section class="view" id="photo"><h2 data-zh="攝影" data-en="Photos"></h2><div class="grid" data-cat="photo"></div></section>
+<section class="view" id="trip"><h2 data-zh="旅行" data-en="Trips"></h2><div class="grid" data-cat="trip"></div></section>
+<section class="view" id="art"><h2 data-zh="插圖" data-en="Illustrations"></h2><div class="grid" data-cat="art"></div></section>
+</main>
+
+<footer>© <span id="yr"></span> ✿</footer>
+<div id="lb"><img alt=""></div>
+
+<script>
+/* ============ 內容區：只要改這裡 ============
+   src 填圖片路徑（例如 "images/photo/berlin-1.jpg"），留空就顯示彩色塗鴉佔位圖。
+   href 可選：旅行卡片點擊後要前往的頁面（例如 "/prague/"）。圖片請先把 HEIC 轉成 JPG。 */
+const ITEMS = {
+ photo:[
+  {zh:"柏林電視塔",en:"Berlin TV Tower",src:""},
+  {zh:"街角咖啡",en:"Corner café",src:""},
+  {zh:"河岸日落",en:"Sunset by the Spree",src:""},
+  {zh:"地鐵站",en:"U-Bahn station",src:""},
+  {zh:"秋天的公園",en:"Autumn park",src:""},
+  {zh:"夜晚的街",en:"Night street",src:""}
+ ],
+ trip:[
+  {zh:"布拉格",en:"Prague",sub:"4 days 3 nights",src:"",href:""},
+  {zh:"伯明罕",en:"Birmingham",src:"",href:""},
+  {zh:"倫敦",en:"London",src:"",href:""},
+  {zh:"柏林週末",en:"Berlin weekends",src:"",href:""}
+ ],
+ art:[
+  {zh:"我的小房間",en:"My little room",src:""},
+  {zh:"麵包與咖啡",en:"Bread & coffee",src:""},
+  {zh:"電車",en:"Tram",src:""},
+  {zh:"貓咪",en:"A cat",src:""},
+  {zh:"行李箱",en:"Suitcase",src:""},
+  {zh:"柏林熊",en:"Berlin bear",src:""}
+ ]
+};
+const SITE_TITLE="Somewhere in Berlin";
+/* 跟著滑鼠的小圖：填你的插圖路徑（建議透明背景 PNG），留空就是黃色小花 */
+const CURSOR_IMG="";            // 例如 "images/art/my-flower.png"
+/* 首頁會飄浮的插圖：填一到數張，留空就是預設的星星和圓圈 */
+const FLOAT_IMGS=[];            // 例如 ["images/art/star.png","images/art/circle.png"]
+/* ============================================ */
+
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const COLORS=["#ffd400","#ff9fb5","#9fe3c8","#b9d4ff","#ffc58a"];
+let lang="zh";
+
+function ph(i){ // 塗鴉佔位圖
+ const c=COLORS[i%COLORS.length],d=["M10 70c20-40 30 30 50-10s30 20 40-20","M10 30c20 30 30-30 50 10s30-10 40 30","M15 50c25-35 35 35 55-5s25 15 30-15"][i%3];
+ return `<svg viewBox="0 0 120 90" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="120" height="90" fill="${c}"/><path d="${d}" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/><circle cx="${30+i*13%60}" cy="${22+i*7%20}" r="9" fill="#fff" stroke="#111" stroke-width="3"/></svg>`;
+}
+function build(){
+ $$(".grid").forEach(g=>{
+  g.innerHTML=ITEMS[g.dataset.cat].map((it,i)=>{
+   const t=it.src?`<img src="${it.src}" alt="${it.en}" loading="lazy">`:ph(i);
+   return `<div class="card" data-src="${it.src||""}" data-href="${it.href||""}"><div class="thumb">${t}</div><div class="cap" data-zh="${it.zh}" data-en="${it.en}"></div></div>`;
+  }).join("");
+ });
+ $$(".card").forEach(c=>c.onclick=()=>{
+  if(c.dataset.href) location.href=c.dataset.href;
+  else if(c.dataset.src){ $("#lb img").src=c.dataset.src; $("#lb").classList.add("on"); }
+ });
+}
+function setLang(l){
+ lang=l; document.documentElement.lang=l==="zh"?"zh-Hant":"en";
+ $$("[data-zh]").forEach(e=>e.textContent=e.dataset[l]);
+ $("#lang").textContent=l==="zh"?"EN":"中";
+ $("#bigname").innerHTML=[...SITE_TITLE].map(ch=>ch===" "?" ":`<span>${ch}</span>`).join("");
+}
+function route(){
+ const id=(location.hash||"#home").slice(1);
+ const v=$("#"+id)&&$("#"+id).classList.contains("view")?id:"home";
+ $$(".view").forEach(s=>s.classList.toggle("on",s.id===v));
+ $$("header nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+v));
+ scrollTo(0,0);
+}
+$("#lang").onclick=()=>setLang(lang==="zh"?"en":"zh");
+$("#lb").onclick=()=>$("#lb").classList.remove("on");
+addEventListener("keydown",e=>{if(e.key==="Escape")$("#lb").classList.remove("on")});
+addEventListener("hashchange",route);
+$("#yr").textContent=new Date().getFullYear();
+
+// 跟著滑鼠慢慢飄的黃色小花
+let mx=innerWidth/2,my=innerHeight/2,fx=mx,fy=my;
+addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY});
+(function loop(){fx+=(mx-fx)*.08;fy+=(my-fy)*.08;
+ $("#flower").style.transform=`translate(${fx+14}px,${fy+14}px)`;requestAnimationFrame(loop)})();
+
+if(CURSOR_IMG){
+ $("#flower").innerHTML=`<img src="${CURSOR_IMG}" alt="" style="width:100%;display:block">`;
+}
+if(FLOAT_IMGS.length){
+ $$("#home .doodle").forEach(d=>d.remove());
+ const spots=[["right:4%;top:2%","150px"],["left:46%;bottom:6%","120px"],["left:4%;bottom:10%","110px"],["right:10%;bottom:20%","100px"]];
+ FLOAT_IMGS.slice(0,4).forEach((src,i)=>{
+  const im=document.createElement("img");
+  im.src=src;im.alt="";im.className="doodle";
+  im.style.cssText=`${spots[i][0]};width:${spots[i][1]};animation-delay:-${i*1.5}s`;
+  $("#home").appendChild(im);
+ });
+}
+
+build(); setLang("zh"); route();
+</script>
+</body>
+</html>
