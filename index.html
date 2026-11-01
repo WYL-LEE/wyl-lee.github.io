@@ -5,66 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Somewhere in Berlin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Huninn&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <div id="flower" aria-hidden="true">
-<svg viewBox="-30 -30 60 60"><g fill="#ffd400" stroke="#111" stroke-width="2.5" stroke-linejoin="round">
+<svg viewBox="-30 -30 60 60"><g fill="#ffe14d" stroke="#111" stroke-width="2.5" stroke-linejoin="round">
 <ellipse cy="-14" rx="8" ry="12"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(72)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(144)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(216)"/><ellipse cy="-14" rx="8" ry="12" transform="rotate(288)"/>
 <circle r="7" fill="#fff"/></g></svg>
 </div>
 
 <header>
-<a class="logo" href="#home">Somewhere in Berlin</a>
-<nav>
-<a href="#about" data-zh="關於我" data-en="About"></a>
-<a href="#photo" data-zh="攝影" data-en="Photos"></a>
-<a href="#trip" data-zh="旅行" data-en="Trips"></a>
-<a href="#art" data-zh="插圖" data-en="Illustrations"></a>
-<button class="lang" id="lang">EN</button>
-</nav>
+<a class="logo" href="#home" id="logo"></a>
+<button id="burger" aria-label="menu" aria-expanded="false"><i></i><i></i><i></i></button>
 </header>
+
+<div id="menu">
+<a href="#home" data-t="home"></a>
+<a href="#about" data-t="about"></a>
+<a href="#photo" data-t="photo"></a>
+<a href="#trip" data-t="trip"></a>
+<a href="#art" data-t="art"></a>
+<button class="lang" id="lang">EN</button>
+</div>
 
 <main>
 <section class="view hero" id="home">
-<svg class="doodle" style="right:4%;top:2%;width:150px" viewBox="0 0 120 120" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"><path d="M10 80c15-50 25 20 40-20s25 30 40-10"/><circle cx="60" cy="30" r="14" fill="#ff9fb5"/></svg>
-<svg class="doodle" style="left:46%;bottom:6%;width:110px;animation-delay:-2s" viewBox="0 0 100 100" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 10l10 28 30 2-23 19 8 29-25-16-25 16 8-29L10 40l30-2z" fill="#9fe3c8"/></svg>
 <h1 id="bigname"></h1>
-<p class="sub" data-zh="交換學生的日常筆記：用相機、腳步和筆，把在柏林和歐洲各地遇見的東西畫下來。" data-en="Notes from an exchange year — photos, trips and drawings from Berlin and around Europe."></p>
-<nav style="margin-top:1rem">
-<a href="#photo" data-zh="看攝影 →" data-en="Photos →"></a>
-<a href="#trip" data-zh="看旅行 →" data-en="Trips →"></a>
-<a href="#art" data-zh="看插圖 →" data-en="Drawings →"></a>
-</nav>
-</section>
-
-<section class="view" id="about">
-<h2 data-zh="關於我" data-en="About me"></h2>
-<div class="box">
-<p data-zh="在柏林的某個角落，留下了一些什麼。有太多值得回憶和記錄的東西，但卻無處下手。
-
-所以這裡記錄著我在德國柏林交換期間的生活、旅行足跡，以及那些值得珍藏的日常。從陌生的城市開始，慢慢認識不同的文化，也重新發現生活中那些平凡卻珍貴的瞬間。
-
-不喜歡走路，卻在這一年瘋狂暴走。用文字與照片留下生活的痕跡。希望透過這個網站，分享我在柏林看見的風景、遇見的人，以及那些只屬於這段旅程的故事。
-
-不要再偷懶了！要整理！。" data-en="Somewhere in a corner of Berlin, a little piece of my story was left behind. There are so many moments worth remembering and documenting, yet I never quite know where to begin.
-
-This website is a collection of my life in Berlin during my exchange year in Germany — the places I traveled to, the everyday moments I want to hold on to, and the memories that made this journey special. Starting from a city that once felt unfamiliar, I gradually came to understand different cultures and rediscover the beauty of ordinary, yet precious, moments in life.
-
-I’ve never been a fan of walking, yet somehow, I spent this year walking more than ever. Through words and photographs, I hope to preserve little traces of this chapter of my life and share the sights I saw, the people I met, and the stories that belong only to this journey.
-
-A little reminder to myself: Stop being lazy and start organizing all those memories!"></p>
+<p class="sub" data-t="heroSub"></p>
+<div class="quick">
+<a href="#photo" data-t="goPhoto"></a>
+<a href="#trip" data-t="goTrip"></a>
+<a href="#art" data-t="goArt"></a>
 </div>
 </section>
 
-<section class="view" id="photo"><h2 data-zh="攝影" data-en="Photos"></h2><div class="grid" data-cat="photo"></div></section>
-<section class="view" id="trip"><h2 data-zh="旅行" data-en="Trips"></h2><div class="grid" data-cat="trip"></div></section>
-<section class="view" id="art"><h2 data-zh="插圖" data-en="Illustrations"></h2><div class="grid" data-cat="art"></div></section>
+<section class="view" id="about">
+<h2 data-t="about"></h2>
+<div class="box"><p data-t="aboutBody"></p></div>
+</section>
+
+<section class="view" id="photo"><h2 data-t="photo"></h2><div class="grid" data-cat="photo"></div></section>
+<section class="view" id="trip"><h2 data-t="trip"></h2><div class="grid" data-cat="trip"></div></section>
+<section class="view" id="art"><h2 data-t="art"></h2><div class="grid" data-cat="art"></div></section>
 </main>
 
-<footer>© <span id="yr"></span> ✿</footer>
+<footer>✿ <span id="yr"></span> ✿</footer>
 <div id="lb"><img alt=""></div>
 
 <script src="assets/js/data.js"></script>
