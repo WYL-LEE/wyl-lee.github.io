@@ -1,42 +1,77 @@
-:root{--ink:#111;--paper:#fffdf6;--sun:#ffd400;--pink:#ff9fb5;--mint:#9fe3c8}
+/* ===== 顏色：想換整體色調，改這幾行就好 ===== */
+:root{
+ --bg:#ff6fb1;      /* 整個網站的背景色（粉紅） */
+ --menu:#ffe14d;    /* 選單展開後的背景色（黃） */
+ --y:#ffe14d; --mint:#5df2c0; --sky:#5cc8ff; --org:#ff9b3d;
+ --ink:#111;
+}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.7;min-height:100vh;
- background-image:radial-gradient(#0000001a 1.2px,transparent 1.2px);background-size:22px 22px}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;line-height:1.7;min-height:100vh}
 a{color:inherit}
-header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:3px solid var(--ink);
- display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;padding:.6rem 1.2rem}
-.logo{font-family:"Caveat Brush",cursive;font-size:1.7rem;text-decoration:none}
-nav{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
-nav a,.lang{font-weight:700;text-decoration:none;border:2.5px solid var(--ink);border-radius:999px;padding:.15rem .9rem;background:#fff;cursor:pointer;font:inherit;font-weight:700;transition:transform .15s,background .15s}
-nav a:hover,.lang:hover{background:var(--sun);transform:rotate(-4deg) scale(1.06)}
-nav a.on{background:var(--ink);color:var(--paper)}
-main{max-width:1100px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.fancy,h1,h2,#menu a,.logo{font-family:"Caveat Brush","Huninn",cursive;font-weight:400}
+
+/* 頂端：左邊標題、右邊漢堡按鈕（沒有線條） */
+header{position:fixed;top:0;left:0;right:0;z-index:70;display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;pointer-events:none}
+header>*{pointer-events:auto}
+.logo{font-size:1.8rem;text-decoration:none;line-height:1}
+#burger{width:54px;height:54px;border:0;border-radius:50%;background:#fff;cursor:pointer;display:grid;place-content:center;gap:6px;transition:transform .2s}
+#burger:hover{transform:rotate(-8deg) scale(1.1)}
+#burger i{display:block;width:26px;height:3px;border-radius:3px;background:var(--ink);transition:transform .25s,opacity .2s}
+#burger.open i:nth-child(1){transform:translateY(9px) rotate(45deg)}
+#burger.open i:nth-child(2){opacity:0}
+#burger.open i:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+/* 展開後的選單 */
+#menu{position:fixed;inset:0;z-index:60;background:var(--menu);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;
+ opacity:0;visibility:hidden;transform:scale(1.04);transition:opacity .25s,transform .25s,visibility .25s}
+#menu.open{opacity:1;visibility:visible;transform:none}
+#menu a{font-size:clamp(3rem,13vw,7rem);line-height:1.15;text-decoration:none;color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;transition:transform .2s}
+#menu a:nth-of-type(2){color:var(--bg)}#menu a:nth-of-type(3){color:var(--sky)}#menu a:nth-of-type(4){color:var(--mint)}#menu a:nth-of-type(5){color:var(--org)}
+#menu a:hover{transform:rotate(-4deg) scale(1.08)}
+#menu a.on{text-decoration:underline wavy var(--ink) 4px;text-underline-offset:10px}
+.lang{margin-top:1.5rem;border:0;border-radius:999px;background:#fff;padding:.3rem 1.4rem;font:inherit;font-weight:700;font-size:1.1rem;cursor:pointer;transition:transform .2s}
+.lang:hover{transform:rotate(-5deg) scale(1.08)}
+
+main{max-width:1100px;margin:0 auto;padding:6rem 1.2rem 5rem}
 .view{display:none}.view.on{display:block;animation:pop .35s ease}
 @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-h1{font-family:"Caveat Brush",cursive;font-weight:400;font-size:clamp(3rem,10vw,6.5rem);line-height:1;margin:1rem 0 .5rem}
-h1 span{display:inline-block;transition:transform .2s}
-h1 span:hover{transform:translateY(-10px) rotate(-8deg);color:#e0a800}
-h2{font-family:"Caveat Brush",cursive;font-weight:400;font-size:2.6rem;margin-bottom:.3rem;display:inline-block;background:linear-gradient(transparent 62%,var(--sun) 62%)}
-.sub{font-size:1.15rem;max-width:34rem;margin-bottom:1.5rem}
-.hero{position:relative;min-height:60vh}
+
+/* 大標題：彩色字加黑邊，像手寫招牌 */
+h1{font-size:clamp(3.2rem,11vw,7.5rem);line-height:1.05;margin:1rem 0 .8rem}
+h1 span,h2{-webkit-text-stroke:3px var(--ink);paint-order:stroke fill}
+h1 span{display:inline-block;color:#fff;transition:transform .2s}
+h1 span:nth-child(5n+1){color:var(--y)}h1 span:nth-child(5n+2){color:#fff}h1 span:nth-child(5n+3){color:var(--mint)}h1 span:nth-child(5n+4){color:var(--sky)}h1 span:nth-child(5n){color:var(--org)}
+h1 span:hover{transform:translateY(-12px) rotate(-8deg)}
+h2{font-size:3.4rem;line-height:1.1;color:var(--y);display:inline-block;margin-bottom:.4rem}
+.sub{font-size:1.2rem;font-weight:700;max-width:34rem;margin-bottom:1.5rem}
+.quick{display:flex;flex-wrap:wrap;gap:.7rem}
+.quick a{background:#fff;border-radius:999px;padding:.35rem 1.2rem;font-weight:700;text-decoration:none;transition:transform .2s}
+.quick a:hover{transform:rotate(-4deg) scale(1.1);background:var(--y)}
+.hero{position:relative;min-height:62vh}
 .doodle{position:absolute;pointer-events:none;animation:float 5s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-14px) rotate(6deg)}}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem;margin-top:1.5rem}
-.card{border:3px solid var(--ink);border-radius:14px;background:#fff;box-shadow:6px 6px 0 var(--ink);overflow:hidden;cursor:pointer;
- transition:transform .2s,box-shadow .2s}
+
+/* 作品卡片：沒有框線，滑過去會浮起來 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.6rem;margin-top:1.5rem}
+.card{cursor:pointer;transition:transform .25s,filter .25s}
 .card:nth-child(odd){transform:rotate(-1.2deg)}.card:nth-child(even){transform:rotate(1deg)}
-.card:hover{transform:rotate(0) translateY(-6px);box-shadow:10px 10px 0 var(--ink)}
-.thumb{aspect-ratio:4/3;display:grid;place-items:center;border-bottom:3px solid var(--ink);overflow:hidden}
+.card:hover{transform:rotate(0) translateY(-8px) scale(1.06);filter:drop-shadow(0 14px 12px #0000003d)}
+.thumb{aspect-ratio:4/3;border-radius:20px;overflow:hidden;display:grid;place-items:center}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.cap{padding:.6rem .9rem;font-weight:700}
-.cap small{display:block;font-weight:400;opacity:.65}
-#about .box{border:3px solid var(--ink);border-radius:16px;background:#fff;box-shadow:6px 6px 0 var(--ink);padding:1.4rem;max-width:42rem;margin-top:1rem}
-#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:50;padding:1rem;cursor:zoom-out}
-#lb.on{display:grid}#lb img{max-width:100%;max-height:90vh;border:4px solid #fff;border-radius:10px}
-#flower{position:fixed;left:0;top:0;width:54px;pointer-events:none;z-index:40;will-change:transform}
+.cap{padding:.5rem .3rem;font-weight:900;font-size:1.1rem}
+.cap small{display:block;font-weight:400}
+.box{background:#fff;border-radius:24px;padding:1.5rem;max-width:42rem;margin-top:1rem}
+
+#lb{position:fixed;inset:0;background:#000c;display:none;place-items:center;z-index:90;padding:1rem;cursor:zoom-out}
+#lb.on{display:grid}#lb img{max-width:100%;max-height:90vh;border-radius:16px}
+footer{text-align:center;padding:1rem;font-family:"Caveat Brush",cursive;font-size:1.3rem}
+
+/* 跟著滑鼠的插圖（有設定 CURSOR_IMG 時，會把原本的箭頭藏起來） */
+#flower{position:fixed;left:0;top:0;width:64px;pointer-events:none;z-index:100;will-change:transform;opacity:0}
+#flower img{width:100%;display:block}
 #flower svg{animation:spin 8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-footer{text-align:center;padding:1rem;font-family:"Caveat Brush",cursive;font-size:1.2rem}
+@media (hover:hover){html.custom-cursor,html.custom-cursor *{cursor:none!important}}
 @media (hover:none){#flower{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

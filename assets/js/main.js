@@ -1,8 +1,8 @@
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
-const COLORS=["#ffd400","#ff9fb5","#9fe3c8","#b9d4ff","#ffc58a"];
+const COLORS=["#ffe14d","#5df2c0","#5cc8ff","#ff9b3d","#ffffff"];
 let lang="zh";
 
-function ph(i){ // 塗鴉佔位圖
+function ph(i){ // 彩色塗鴉佔位圖
  const c=COLORS[i%COLORS.length],d=["M10 70c20-40 30 30 50-10s30 20 40-20","M10 30c20 30 30-30 50 10s30-10 40 30","M15 50c25-35 35 35 55-5s25 15 30-15"][i%3];
  return `<svg viewBox="0 0 120 90" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="120" height="90" fill="${c}"/><path d="${d}" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/><circle cx="${30+i*13%60}" cy="${22+i*7%20}" r="9" fill="#fff" stroke="#111" stroke-width="3"/></svg>`;
 }
@@ -20,35 +20,56 @@ function build(){
 }
 function setLang(l){
  lang=l; document.documentElement.lang=l==="zh"?"zh-Hant":"en";
+ $$("[data-t]").forEach(e=>e.textContent=TEXT[e.dataset.t][l]);
  $$("[data-zh]").forEach(e=>e.textContent=e.dataset[l]);
  $("#lang").textContent=l==="zh"?"EN":"中";
- $("#bigname").innerHTML=[...SITE_TITLE].map(ch=>ch===" "?" ":`<span>${ch}</span>`).join("");
+}
+function menu(open){
+ $("#menu").classList.toggle("open",open);
+ $("#burger").classList.toggle("open",open);
+ $("#burger").setAttribute("aria-expanded",open);
 }
 function route(){
  const id=(location.hash||"#home").slice(1);
  const v=$("#"+id)&&$("#"+id).classList.contains("view")?id:"home";
  $$(".view").forEach(s=>s.classList.toggle("on",s.id===v));
- $$("header nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+v));
- scrollTo(0,0);
+ $$("#menu a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+v));
+ menu(false); scrollTo(0,0);
 }
-$("#lang").onclick=()=>setLang(lang==="zh"?"en":"zh");
-$("#lb").onclick=()=>$("#lb").classList.remove("on");
-addEventListener("keydown",e=>{if(e.key==="Escape")$("#lb").classList.remove("on")});
-addEventListener("hashchange",route);
+
+// 標題
+$("#logo").textContent=SITE_TITLE;
+$("#bigname").innerHTML=[...SITE_TITLE].map(ch=>ch===" "?" ":`<span>${ch}</span>`).join("");
 $("#yr").textContent=new Date().getFullYear();
 
-// 跟著滑鼠慢慢飄的黃色小花
-let mx=innerWidth/2,my=innerHeight/2,fx=mx,fy=my;
-addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY});
-(function loop(){fx+=(mx-fx)*.08;fy+=(my-fy)*.08;
- $("#flower").style.transform=`translate(${fx+14}px,${fy+14}px)`;requestAnimationFrame(loop)})();
+// 事件
+$("#burger").onclick=()=>menu(!$("#menu").classList.contains("open"));
+$("#lang").onclick=()=>setLang(lang==="zh"?"en":"zh");
+$("#lb").onclick=()=>$("#lb").classList.remove("on");
+addEventListener("keydown",e=>{if(e.key==="Escape"){$("#lb").classList.remove("on");menu(false)}});
+addEventListener("hashchange",route);
+$$("#menu a,.logo").forEach(a=>a.addEventListener("click",()=>{if(a.getAttribute("href")===(location.hash||"#home"))menu(false)}));
 
+// 跟著滑鼠的插圖
 if(CURSOR_IMG){
- $("#flower").innerHTML=`<img src="${CURSOR_IMG}" alt="" style="width:100%;display:block">`;
+ document.documentElement.classList.add("custom-cursor");
+ $("#flower").innerHTML=`<img src="${CURSOR_IMG}" alt="">`;
 }
+let mx=0,my=0,fx=0,fy=0,moved=false;
+addEventListener("mousemove",e=>{
+ mx=e.clientX;my=e.clientY;
+ if(!moved){moved=true;fx=mx;fy=my;$("#flower").style.opacity=1}
+});
+(function loop(){
+ const h=$("#flower").offsetWidth/2;
+ fx+=(mx-fx)*.35;fy+=(my-fy)*.35;
+ $("#flower").style.transform=`translate(${fx-h}px,${fy-h}px)`;
+ requestAnimationFrame(loop);
+})();
+
+// 首頁飄浮的插圖
 if(FLOAT_IMGS.length){
- $$("#home .doodle").forEach(d=>d.remove());
- const spots=[["right:4%;top:2%","150px"],["left:46%;bottom:6%","120px"],["left:4%;bottom:10%","110px"],["right:10%;bottom:20%","100px"]];
+ const spots=[["right:4%;top:2%","190px"],["left:50%;bottom:4%","160px"],["left:3%;bottom:8%","140px"],["right:8%;bottom:26%","130px"]];
  FLOAT_IMGS.slice(0,4).forEach((src,i)=>{
   const im=document.createElement("img");
   im.src=src;im.alt="";im.className="doodle";
@@ -58,12 +79,3 @@ if(FLOAT_IMGS.length){
 }
 
 build(); setLang("zh"); route();
-
-// 把滑鼠游標換成自己的插圖
-const REAL_CURSOR_IMG = "images/decor/cursor.png";
-if (REAL_CURSOR_IMG) {
-  const st = document.createElement("style");
-  st.textContent = `html,body,a,button,.card,#lb{cursor:url("${REAL_CURSOR_IMG}") 0 0, auto !important}`;
-  document.head.appendChild(st);
-  document.querySelector("#flower").style.display = "none";
-}
