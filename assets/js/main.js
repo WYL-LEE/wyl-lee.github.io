@@ -6,17 +6,37 @@ function ph(i){ // 彩色塗鴉佔位圖
  const c=COLORS[i%COLORS.length],d=["M10 70c20-40 30 30 50-10s30 20 40-20","M10 30c20 30 30-30 50 10s30-10 40 30","M15 50c25-35 35 35 55-5s25 15 30-15"][i%3];
  return `<svg viewBox="0 0 120 90" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="120" height="90" fill="${c}"/><path d="${d}" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round"/><circle cx="${30+i*13%60}" cy="${22+i*7%20}" r="9" fill="#fff" stroke="#111" stroke-width="3"/></svg>`;
 }
+const esc=s=>String(s||"").replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
 function build(){
  $$(".grid").forEach(g=>{
   g.innerHTML=ITEMS[g.dataset.cat].map((it,i)=>{
-   const t=it.src?`<img src="${it.src}" alt="${it.en}" loading="lazy">`:ph(i);
-   return `<div class="card" data-src="${it.src||""}" data-href="${it.href||""}"><div class="thumb">${t}</div><div class="cap" data-zh="${it.zh}" data-en="${it.en}"></div></div>`;
+   const t=it.src?`<img src="${esc(it.src)}" alt="${esc(it.en)}" loading="lazy">`:ph(i);
+   const d=it.desc||{}, hd=it.head||{};
+   return `<div class="card" tabindex="0" data-src="${esc(it.src)}" data-href="${esc(it.href)}">
+<div class="face"><div class="thumb">${t}</div>
+<div class="bar"><i class="dot" style="background:${COLORS[i%COLORS.length]}"></i><span class="ct" data-zh="${esc(it.zh)}" data-en="${esc(it.en)}"></span><span class="tag">${esc(it.tag)}</span></div></div>
+<div class="panel"><b class="pt" data-zh="${esc(hd.zh)}" data-en="${esc(hd.en)}"></b><span class="pd" data-zh="${esc(d.zh)}" data-en="${esc(d.en)}"></span></div></div>`;
   }).join("");
  });
- $$(".card").forEach(c=>c.onclick=()=>{
-  if(c.dataset.href) location.href=c.dataset.href;
-  else if(c.dataset.src){ $("#lb img").src=c.dataset.src; $("#lb").classList.add("on"); }
+ $$(".card").forEach(c=>{
+  const go=()=>{
+   if(c.dataset.href) location.href=c.dataset.href;
+   else if(c.dataset.src){ $("#lb img").src=c.dataset.src; $("#lb").classList.add("on"); }
+  };
+  c.onclick=go;
+  c.onkeydown=e=>{if(e.key==="Enter")go()};
  });
+}
+function postcard(){ // 翻牌正面的明信片
+ const f=$("#postcard");
+ if(typeof POSTCARD_IMG!=="undefined"&&POSTCARD_IMG){f.innerHTML=`<img src="${esc(POSTCARD_IMG)}" alt="postcard">`;return}
+ f.innerHTML=`<svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice"><rect width="300" height="200" fill="#fffaf0"/>
+<rect x="8" y="8" width="284" height="184" rx="8" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="24" y="70" font-family="Caveat Brush,cursive" font-size="40" fill="#ff6fb1" stroke="#111" stroke-width="1.5" paint-order="stroke">Greetings</text>
+<text x="24" y="112" font-family="Caveat Brush,cursive" font-size="40" fill="#5cc8ff" stroke="#111" stroke-width="1.5" paint-order="stroke">from Berlin</text>
+<path d="M24 140c20-22 36 18 56-4s34 14 54-6" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+<rect x="228" y="22" width="52" height="64" fill="#ffe14d" stroke="#111" stroke-width="2.5"/><circle cx="254" cy="48" r="11" fill="#fff" stroke="#111" stroke-width="2.5"/><path d="M236 74c6-8 12 6 18-2s12 6 18-2" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M206 132h74M206 152h74M206 172h50" stroke="#111" stroke-width="2.5" stroke-linecap="round"/></svg>`;
 }
 function setLang(l){
  lang=l; document.documentElement.lang=l==="zh"?"zh-Hant":"en";
@@ -78,4 +98,8 @@ if(FLOAT_IMGS.length){
  });
 }
 
-build(); setLang("zh"); route();
+const flip=$("#flip");
+flip.onclick=()=>flip.classList.toggle("on");
+flip.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();flip.classList.toggle("on")}};
+
+build(); postcard(); setLang("zh"); route();

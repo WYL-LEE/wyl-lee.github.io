@@ -3,6 +3,7 @@
  --bg:#ff6fb1;      /* 整個網站的背景色（粉紅） */
  --menu:#ffe14d;    /* 選單展開後的背景色（黃） */
  --y:#ffe14d; --mint:#5df2c0; --sky:#5cc8ff; --org:#ff9b3d;
+ --panel:#5df2c0;   /* 滑過卡片時跳出來的介紹底色（薄荷綠） */
  --ink:#111;
 }
 *{box-sizing:border-box;margin:0}
@@ -52,15 +53,38 @@ h2{font-size:3.4rem;line-height:1.1;color:var(--y);display:inline-block;margin-b
 .doodle{position:absolute;pointer-events:none;animation:float 5s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-14px) rotate(6deg)}}
 
-/* 作品卡片：沒有框線，滑過去會浮起來 */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.6rem;margin-top:1.5rem}
-.card{cursor:pointer;transition:transform .25s,filter .25s}
+/* 作品卡片：白色卡片＋照片，滑過去下面會跳出介紹 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.8rem;margin-top:1.5rem;padding-bottom:5rem}
+.card{position:relative;cursor:pointer;transition:transform .25s,filter .25s;outline:none}
 .card:nth-child(odd){transform:rotate(-1.2deg)}.card:nth-child(even){transform:rotate(1deg)}
-.card:hover{transform:rotate(0) translateY(-8px) scale(1.06);filter:drop-shadow(0 14px 12px #0000003d)}
-.thumb{aspect-ratio:4/3;border-radius:20px;overflow:hidden;display:grid;place-items:center}
+.card:hover,.card:focus-visible{transform:rotate(0) translateY(-8px) scale(1.04);filter:drop-shadow(0 14px 12px #0000003d);z-index:20}
+.face{position:relative;z-index:2;background:#fff;border-radius:22px;padding:.6rem}
+.thumb{aspect-ratio:4/3;border-radius:16px;overflow:hidden;display:grid;place-items:center}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.cap{padding:.5rem .3rem;font-weight:900;font-size:1.1rem}
-.cap small{display:block;font-weight:400}
+.bar{display:flex;align-items:center;gap:.6rem;padding:.7rem .3rem .2rem}
+.dot{flex:none;width:28px;height:28px;border-radius:50%;position:relative}
+.dot::after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--ink)}
+.ct{flex:1;font-weight:900;letter-spacing:.04em;font-size:.95rem;line-height:1.3}
+.tag{font-weight:900;font-size:.9rem;white-space:nowrap}
+.panel{position:absolute;left:0;right:0;top:calc(100% - 24px);z-index:1;background:var(--panel);border-radius:0 0 22px 22px;padding:36px 1rem .9rem;
+ display:flex;flex-direction:column;gap:.15rem;opacity:0;transform:translateY(-14px);pointer-events:none;transition:opacity .25s,transform .25s}
+.card:hover .panel,.card:focus-visible .panel{opacity:1;transform:none}
+.pt{font-weight:900;font-size:.95rem}.pd{font-size:.88rem;line-height:1.55}
+.pt:empty,.pd:empty{display:none}
+@media (hover:none){.panel{position:relative;top:auto;margin-top:-24px;opacity:1;transform:none}}
+
+/* 翻牌：點一下明信片，翻到背面看長介紹 */
+.flip{perspective:1200px;max-width:560px;margin:1.4rem 0 1.6rem;cursor:pointer;position:relative;z-index:2;outline:none}
+.flip-in{position:relative;aspect-ratio:3/2;min-height:340px;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.2,.8,.2,1)}
+.flip:not(.on):hover .flip-in,.flip:focus-visible .flip-in{transform:rotate(-1.5deg) scale(1.02)}
+.flip.on .flip-in{transform:rotateY(180deg)}
+.side{position:absolute;inset:0;border-radius:22px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 10px 10px #00000030)}
+.front{background:#fffaf0}
+.front img{width:100%;height:100%;object-fit:cover;display:block}
+.front svg{width:100%;height:100%;display:block}
+.back{background:var(--y);transform:rotateY(180deg);padding:1.4rem 1.5rem;overflow-y:auto}
+.introtxt{white-space:pre-line;line-height:1.85;font-weight:500}
+.hint{display:inline-block;margin-top:.8rem;background:#fff;border-radius:999px;padding:.1rem .9rem;font-weight:700;font-size:.9rem}
 .box{background:#fff;border-radius:24px;padding:1.5rem;max-width:42rem;margin-top:1rem}
 
 #lb{position:fixed;inset:0;background:#000c;display:none;place-items:center;z-index:90;padding:1rem;cursor:zoom-out}
