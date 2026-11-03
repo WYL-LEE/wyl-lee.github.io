@@ -46,7 +46,7 @@ const ITEMS = {
   {zh:"夜晚的街",en:"Night street",tag:"Berlin",src:"",desc:{zh:"在這裡寫一兩句這張照片的故事。",en:"A sentence or two about this photo."}}
  ],
  trip:[
-  {zh:"布拉格",en:"Prague",tag:"2025.10",src:"images/trip/berlin-27.jpg",href:"trips/prague.html",
+  {zh:"布拉格",en:"Prague",tag:"2025.10",src:"images/trip/prague-cover",href:"trips/prague.html",
    head:{zh:"捷克 · 三天兩夜",en:"Czechia · 3 days"},desc:{zh:"查理大橋、天文鐘、卡夫卡博物館，還有一家超級漂亮的木偶店。",en:"Charles Bridge, the astronomical clock, the Kafka Museum, and a gorgeous puppet shop."}},
   {zh:"伯明罕",en:"Birmingham",tag:"",src:"",href:"",desc:{zh:"在這裡寫一兩句這趟旅行的故事。",en:"A sentence or two about this trip."}},
   {zh:"倫敦",en:"London",tag:"",src:"",href:"",desc:{zh:"在這裡寫一兩句這趟旅行的故事。",en:"A sentence or two about this trip."}},
